@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    .gamephoto {
+        padding-left: 15px;
+        width: 470px;
+        height: 300px;
+    }
+
+    div {
+        margin-top: 10px;
+    }
+    .card1 {
+        transition: 1s;
+    }
+    .card1:hover {
+        scale: 1.1;
+        box-shadow: 0 0 40px #000000;
+        border-radius: 4px;
+    }
+</style>
+<body>
+
+<div class="container">
+    <div th:insert="blocks/headerblock :: headerbb"></div>
+
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+
+            <a class="p-2 link-secondary" href="/home">Genres</a>
+
+            <a class="p-2 link-secondary" href="/home">Games</a>
+            <a class="p-2 link-secondary" href="/cont2">Store</a>
+            <a class="p-2 link-secondary" href="/posts/add">Add smth</a>
+
+            <a class="p-2 link-secondary" href="/posts">Posts</a>
+        </nav>
+    </div>
+</div>
+
+<main>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Welcome to the Game Tavern</h1>
+                <p class="lead text-muted">
+                    Wonderful place where you can make purchases and play your games!
+                    We are offering you more than 1000+ games. Look to our last updates
+
+                </p>
+                <p>
+                    <a href="#container2" class="btn btn-primary my-2">See the collection</a>
+                    <a href="cont2.html" class="btn btn-secondary my-2">Make the purchase</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <div class="album py-5 bg-light">
+        <div class="container2">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://prostomob.com/wp-content/uploads/2020/06/hitman3.jpg">
+                        <div class="card-body">
+                            <p class="card-text">HITMAN 3</p>
+                            <p>Game Code: A001</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://dota2.net/images/cdn/lm/LmpwZzlYNmQ4WEFxM04w.jpg">
+
+                        <div class="card-body">
+                            <p class="card-text">Dota 2</p>
+                            <p>Game Code: A002</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://static-prod.weplay.tv/2019-12-26/b1be38ea3c98786b3e07a122660b3f27_large_cover.DDB55F-1F140A-8B3310.jpeg">
+
+                        <div class="card-body">
+                            <p class="card-text">Counter Strike: Global Offensive</p>
+                            <p>Game Code: A003</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://www.dlh.net/public/data/Texts/60776/0000_ItemCover_5c6645eb9620e.jpg">
+
+                        <div class="card-body">
+                            <p class="card-text">Brawlhalla</p>
+                            <p>Game Code: A004</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://www.denofgeek.com/wp-content/uploads/2018/11/warcraft_3_reforged_remaster_2019.jpg?fit=1200%2C800">
+
+                        <div class="card-body">
+                            <p class="card-text">Warcraft: Frozen Throne</p>
+                            <p>Game Code: A005</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">159 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://sm.ign.com/t/ign_ru/screenshot/default/apex-legend_s8xe.1200.jpg">
+
+                        <div class="card-body">
+                            <p class="card-text">Apex legend</p>
+                            <p>Game Code: A006</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">49 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://steambucks.com/wp-content/uploads/2017/02/ss_eda99e7f705a113d04ab2a7a36068f3e7b343d17.1920x1080.jpg">
+
+                        <div class="card-body">
+                            <p class="card-text">The Witcher 3: Wild Hunt</p>
+                            <p>Game Code: A007</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://eskipaper.com/images/skyrim-logo-5.jpg">
+
+                        <div class="card-body">
+                            <p class="card-text">Skyrim</p>
+                            <p>Game Code: A008</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card1 col">
+                    <div class="card shadow-sm">
+                        <img class="gamephoto" src="https://cdn.wallpapersafari.com/56/69/TdPnYO.png">
+
+                        <div class="card-body">
+                            <p class="card-text">The Last of Us</p>
+                            <p>Game Code: A009</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/cont2">Buy</a></a></button>
+                                </div>
+                                <small class="text-muted">99 $</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div th:insert="blocks/footerblock :: footerbb"></div>
+
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

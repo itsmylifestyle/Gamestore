@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<style>
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .p-2 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    form {
+        width: 60%;
+        margin-left: 5%;
+    }
+</style>
+<body>
+<div th:insert="blocks/headerblock :: headerbb"></div>
+
+<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+
+        <a class="p-2 link-secondary" href="/home">Genres</a>
+
+        <a class="p-2 link-secondary" href="/home">Games</a>
+        <a class="p-2 link-secondary" href="/cont2">Store</a>
+        <a class="p-2 link-secondary" href="/posts/add">Add smth</a>
+
+        <a class="p-2 link-secondary" href="/posts">Posts</a>
+    </nav>
+</div>
+
+<main class="form-signin">
+    <form>
+
+        <h1 class="h3 mb-3 fw-normal">Your order information</h1>
+
+        <label for="inputEmail" class="visually-hidden">Name</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Name" required autofocus>
+
+        <label for="inputPassword" class="visually-hidden">Surname</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Surname" required>
+
+        <label for="inputPassword" class="visually-hidden">Delivery to:</label>
+        <input type="password" id="address" class="form-control" placeholder="address" required>
+
+        <label for="inputPassword" class="visually-hidden">Game Code:</label>
+        <input type="text" id="code" class="form-control" placeholder="write here..." required>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Buy</button>
+        <p class="mt-5 mb-3 text-muted">&copy; Java Project</p>
+    </form>
+</main>
+
+
+<div th:insert="blocks/footerblock :: footerbb"></div>
+
+</body>
+</html>

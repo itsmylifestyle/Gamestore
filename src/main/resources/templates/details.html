@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div th:insert="blocks/headerblock :: headerbb"></div>
+
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+
+            <a class="p-2 link-secondary" href="/home">Genres</a>
+
+            <a class="p-2 link-secondary" href="/home">Games</a>
+            <a class="p-2 link-secondary" href="/cont2">Store</a>
+            <a class="p-2 link-secondary" href="/posts/add">Add smth</a>
+
+            <a class="p-2 link-secondary" href="/posts">Posts</a>
+        </nav>
+    </div>
+</div>
+
+<main>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Welcome to the Game Tavern</h1>
+                <p class="lead text-muted">
+                    Wonderful place where you can make purchases and play your games!
+                    We are offering you more than 1000+ games. Look to our last updates
+
+                </p>
+                <p>
+                    <a href="#container2" class="btn btn-primary my-2">See the collection</a>
+                    <a href="cont2.html" class="btn btn-secondary my-2">Make the purchase</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div>
+
+
+    <div th:each= el .${posts} class="alert alert-info mt-2">
+        <h3 th:text="${el.title}"/>
+        <p th:text=${el.fulltext}></p>
+        <p th:text=${el.views}></p>
+        <a th:href="'/posts/' + ${el.id} + '/edit'" class="btn btn-warning">Redact</a>
+        <a th:href="'/posts/' + ${el.id} + '/remove'" class="btn btn-warning">delete</a>
+    </div>
+</div>
+
+
+<div th:insert="blocks/footerblock :: footerbb"></div>
+
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
